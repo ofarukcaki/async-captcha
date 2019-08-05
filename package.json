@@ -1,0 +1,17 @@
+{
+  "name": "async-captcha",
+  "version": "1.0.0",
+  "description": "API wrapper for captcha solving services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "anticatpcha",
+    "captcha",
+    "solver",
+    "async"
+  ],
+  "author": "Faruk Caki <contact@ofarukcaki.com> (https://ofarukcaki.com)",
+  "license": "ISC"
+}
