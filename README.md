@@ -12,10 +12,13 @@ Automate the process of captcha solving for various services.
 ## Usage
 Include the module in your code:
 
-    const captcha = require("async-captcha");
-    
-    // Parameters: (API_KEY:String, IntervalSeconds:Number, MaxRetry:Number)
-    const anticaptcha = new captcha("YOUR_API_KEY",  2, 10);
+```javascript
+const captcha = require("async-captcha");
+
+// Parameters: (API_KEY:String, IntervalSeconds:Number, MaxRetry:Number)
+
+const anticaptcha = new captcha("YOUR_API_KEY", 2, 10);
+```
 
 
 ### Async/await
@@ -23,14 +26,16 @@ Include the module in your code:
    #### anticaptcha.getResult
    
 
-    // Your image as base64 string
-    const base64Image = "iVBORw0KGgoAAAANSUhEUg......lFTkSuQmCC="; 
-    
-    let  res  =  await  anticaptcha.getResult(base64Image);
-    
-    // res contains the solved captcha value
-    console.log(res);
-    // "pKwtH5"
+```javascript
+// Your image as base64 string
+const base64Image = "iVBORw0KGgoAAAANSUhEUg......lFTkSuQmCC="; 
+
+let  res  =  await  anticaptcha.getResult(base64Image);
+
+// res contains the solved captcha value
+console.log(res);
+// "pKwtH5"
+```
 
 <hr>
 
@@ -39,10 +44,12 @@ Same as async/await, but using promises.
   
    #### anticaptcha.getResult
 
-    anticaptcha.getResult(base64)    
-    .then(res  =>  {    
-       console.log(res);    
-    })    
-    .catch(err  =>  {    
-       if (err) console.log(err);    
-    });
+```javascript
+anticaptcha.getResult(base64)    
+.then(res  =>  {    
+   console.log(res);    
+})    
+.catch(err  =>  {    
+   if (err) console.log(err);    
+});
+```
