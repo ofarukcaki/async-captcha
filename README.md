@@ -2,7 +2,7 @@
 # async-captcha
 Automate the process of captcha solving for various services. 
 
-**Current list of supported services:**
+**Current list of supported services:**   
 [✔] [Anti-captcha](http://getcaptchasolution.com/4n22661zqv)
 
 ## Installation
