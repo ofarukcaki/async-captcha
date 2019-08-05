@@ -23,7 +23,7 @@ const anticaptcha = new captcha("YOUR_API_KEY", 2, 10);
 
 ### Async/await
 
-   #### anticaptcha.getResult
+#### anticaptcha.getResult
    
 
 ```javascript
@@ -42,7 +42,7 @@ console.log(res);
 ### Promises
 Same as async/await, but using promises.
   
-   #### anticaptcha.getResult
+#### anticaptcha.getResult
 
 ```javascript
 anticaptcha.getResult(base64)    

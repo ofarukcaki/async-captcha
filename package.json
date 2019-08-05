@@ -1,6 +1,6 @@
 {
   "name": "async-captcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API wrapper for captcha solving services.",
   "main": "index.js",
   "scripts": {
