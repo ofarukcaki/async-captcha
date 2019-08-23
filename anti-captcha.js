@@ -8,13 +8,32 @@ class Anticaptcha {
     this.retry = retry;
   }
 
-  async sendCaptcha(captcha) {
+  getDefault(o) {
+    return {
+      phrase: o.phrase ? o.phrase : false,
+      case: o.case ? o.case : false,
+      numeric: o.numeric ? o.numeric : 0,
+      math: o.math ? o.math : false,
+      minLength: o.minLength ? o.minLength : 0,
+      maxLength: o.maxLength ? o.maxLength : 0
+    };
+  }
+
+  async sendCaptcha(captcha, obj) {
+    if (obj !== undefined) {
+      obj = this.getDefault(obj);
+    }
+
     let res = await axios.post("https://api.anti-captcha.com/createTask", {
       clientKey: this.api,
-      task: {
-        type: "ImageToTextTask",
-        body: captcha
-      }
+      task: Object.assign(
+        {},
+        {
+          type: "ImageToTextTask",
+          body: captcha
+        },
+        obj
+      )
     });
     if (res.status === 200 && res.data.errorId == 0) {
       return res.data.taskId;
@@ -38,9 +57,9 @@ class Anticaptcha {
       setTimeout(resolve, timeout);
     });
   }
-  async getResult(captcha) {
+  async getResult(captcha, o) {
     let retryCount = 0;
-    let taskId = await this.sendCaptcha(captcha);
+    let taskId = await this.sendCaptcha(captcha, o === undefined ? {} : o);
     if (taskId === null) return null;
     let result = null;
     let c = 1;
