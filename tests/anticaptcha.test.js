@@ -14,7 +14,7 @@ const base64 =
 // })();
 
 anticaptcha
-  .getResult(base64, { minLength: 5, maxLength: 5, case: true })
+  .getResult(base64, { minLength: 5, maxLength: 5, case: true,comment:"all lowercase" })
   .then(res => {
     console.log(res);
   })

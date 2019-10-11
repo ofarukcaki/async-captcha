@@ -15,7 +15,8 @@ class Anticaptcha {
       numeric: o.numeric ? o.numeric : 0,
       math: o.math ? o.math : false,
       minLength: o.minLength ? o.minLength : 0,
-      maxLength: o.maxLength ? o.maxLength : 0
+      maxLength: o.maxLength ? o.maxLength : 0,
+      comment: o.comment ? o.comment : ""
     };
   }
 
