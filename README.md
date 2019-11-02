@@ -1,6 +1,8 @@
 # async-captcha
 
-Automate the process of captcha solving for various services.
+Automate the process of captcha solving for various services.       
+
+**See my related Medium post: [Solving Captchas with Puppeteer](https://medium.com/@ofarukcaki/solving-captchas-with-puppeteer-8ce2521feb3b)**
 
 **Current list of supported services:**  
 [✔][anti-captcha](http://getcaptchasolution.com/4n22661zqv)
