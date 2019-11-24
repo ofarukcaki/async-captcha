@@ -88,5 +88,5 @@ let res = await anticaptcha.getResult(base64Image, options);
 
 // res contains the solved captcha value
 console.log(res);
-// "pKwtH5"
+// "pKwH5"
 ```
